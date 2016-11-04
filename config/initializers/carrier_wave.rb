@@ -6,13 +6,13 @@ config.fog_credentials = {
 
 :provider => 'AWS',
 
-:aws_access_key_id => 'AKIAIVL5RDHQSUFX5W6Q',
+:aws_access_key_id => ENV['S3_ACCESS_KEY'],
 
-:aws_secret_access_key => 'I3e+TkwFhgmWyEOtx20zp/2FEQsBcPGz6/gBdHYc'
+:aws_secret_access_key => ENV['S3_SECRET_KEY']
 
 }
 
-config.fog_directory = 'mannarisgulp'
+config.fog_directory = ENV['S3_BUCKET']
 
 end
 
