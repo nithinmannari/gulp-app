@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161104151835) do
+ActiveRecord::Schema.define(version: 20161104194436) do
+
+  create_table "images", force: :cascade do |t|
+    t.string   "name"
+    t.string   "picture"
+    t.integer  "restaurant_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "images", ["restaurant_id"], name: "index_images_on_restaurant_id"
 
   create_table "restaurants", force: :cascade do |t|
     t.string   "name"
@@ -20,6 +30,7 @@ ActiveRecord::Schema.define(version: 20161104151835) do
     t.string   "website"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "avatar"
   end
 
 end
