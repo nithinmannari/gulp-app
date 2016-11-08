@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   devise_for :users
+=======
+  resources :images
+>>>>>>> cc182c540602ca06630179f7cced187ea4a850aa
   resources :restaurants
   
   root 'restaurants#index'
